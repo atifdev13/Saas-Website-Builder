@@ -106,11 +106,11 @@ const MenuOptions = ({
                 className="w-full my-4 flex items-center justify-between py-8"
                 variant="ghost"
               >
-                <div className="flex items-center text-left gap-2">
-                  <Compass />
-                  <div className="flex flex-col">
-                    {details.name}
-                    <span className="text-muted-foreground">
+                <div className="flex items-center text-left gap-2 overflow-hidden">
+                  <Compass className="shrink-0" />
+                  <div className="flex flex-col overflow-hidden">
+                    <span className="truncate">{details.name}</span>
+                    <span className="text-muted-foreground truncate text-xs">
                       {details.address}
                     </span>
                   </div>
@@ -138,7 +138,7 @@ const MenuOptions = ({
                               href={`/agency/${user?.Agency?.id}`}
                               className="flex gap-4 w-full h-full"
                             >
-                              <div className="relative w-16">
+                              <div className="relative w-16 shrink-0">
                                 <Image
                                   src={user?.Agency?.agencyLogo}
                                   alt="Agency Logo"
@@ -146,9 +146,9 @@ const MenuOptions = ({
                                   className="rounded-md object-contain"
                                 />
                               </div>
-                              <div className="flex flex-col flex-1">
-                                {user?.Agency?.name}
-                                <span className="text-muted-foreground">
+                              <div className="flex flex-col flex-1 overflow-hidden">
+                                <span className="truncate">{user?.Agency?.name}</span>
+                                <span className="text-muted-foreground truncate text-xs">
                                   {user?.Agency?.address}
                                 </span>
                               </div>
@@ -159,7 +159,7 @@ const MenuOptions = ({
                                 href={`/agency/${user?.Agency?.id}`}
                                 className="flex gap-4 w-full h-full"
                               >
-                                <div className="relative w-16">
+                                <div className="relative w-16 shrink-0">
                                   <Image
                                     src={user?.Agency?.agencyLogo}
                                     alt="Agency Logo"
@@ -167,9 +167,9 @@ const MenuOptions = ({
                                     className="rounded-md object-contain"
                                   />
                                 </div>
-                                <div className="flex flex-col flex-1">
-                                  {user?.Agency?.name}
-                                  <span className="text-muted-foreground">
+                                <div className="flex flex-col flex-1 overflow-hidden">
+                                  <span className="truncate">{user?.Agency?.name}</span>
+                                  <span className="text-muted-foreground truncate text-xs">
                                     {user?.Agency?.address}
                                   </span>
                                 </div>
@@ -188,7 +188,7 @@ const MenuOptions = ({
                                 href={`/subaccount/${subaccount.id}`}
                                 className="flex gap-4 w-full h-full"
                               >
-                                <div className="relative w-16">
+                                <div className="relative w-16 shrink-0">
                                   <Image
                                     src={subaccount.subAccountLogo}
                                     alt="subaccount Logo"
@@ -196,9 +196,9 @@ const MenuOptions = ({
                                     className="rounded-md object-contain"
                                   />
                                 </div>
-                                <div className="flex flex-col flex-1">
-                                  {subaccount.name}
-                                  <span className="text-muted-foreground">
+                                <div className="flex flex-col flex-1 overflow-hidden">
+                                  <span className="truncate">{subaccount.name}</span>
+                                  <span className="text-muted-foreground truncate text-xs">
                                     {subaccount.address}
                                   </span>
                                 </div>
@@ -209,7 +209,7 @@ const MenuOptions = ({
                                   href={`/subaccount/${subaccount.id}`}
                                   className="flex gap-4 w-full h-full"
                                 >
-                                  <div className="relative w-16">
+                                  <div className="relative w-16 shrink-0">
                                     <Image
                                       src={subaccount.subAccountLogo}
                                       alt="subaccount Logo"
@@ -217,9 +217,9 @@ const MenuOptions = ({
                                       className="rounded-md object-contain"
                                     />
                                   </div>
-                                  <div className="flex flex-col flex-1">
-                                    {subaccount.name}
-                                    <span className="text-muted-foreground">
+                                  <div className="flex flex-col flex-1 overflow-hidden">
+                                    <span className="truncate">{subaccount.name}</span>
+                                    <span className="text-muted-foreground truncate text-xs">
                                       {subaccount.address}
                                     </span>
                                   </div>
@@ -282,7 +282,7 @@ const MenuOptions = ({
                       >
                         <Link
                           href={sidebarOptions.link}
-                          className="flex items-center gap-2 hover:bg-transparent rounded-md transition-all md:w-full w-[320px]"
+                          className="flex items-center gap-2 rounded-md transition-all md:w-full w-[320px] hover:bg-primary/10 p-1"
                         >
                           {val}
                           <span>{sidebarOptions.name}</span>

@@ -99,23 +99,24 @@ const Page = async ({
   return (
     <div className="relative h-full">
       {!agencyDetails.connectAccountId && (
-        <div className="absolute -top-10 -left-10 right-0 bottom-0 z-30 flex items-center justify-center backdrop-blur-md bg-background/50">
-          <Card>
-            <CardHeader>
-              <CardTitle>Connect Your Stripe</CardTitle>
+        <Card className="border-yellow-600/50 bg-yellow-500/10 mb-6">
+          <CardHeader className="flex flex-row items-center gap-4 py-4">
+            <DollarSign className="text-yellow-500 shrink-0" />
+            <div className="flex-1">
+              <CardTitle className="text-lg">Connect Your Stripe</CardTitle>
               <CardDescription>
                 You need to connect your stripe account to see metrics
               </CardDescription>
-              <Link
-                href={`/agency/${agencyDetails.id}/launchpad`}
-                className="p-2 w-fit bg-secondary text-white rounded-md flex items-center gap-2"
-              >
-                <ClipboardIcon />
-                Launch Pad
-              </Link>
-            </CardHeader>
-          </Card>
-        </div>
+            </div>
+            <Link
+              href={`/agency/${agencyDetails.id}/launchpad`}
+              className="p-2 px-4 bg-primary text-white rounded-md flex items-center gap-2 shrink-0 hover:bg-primary/80 transition-colors"
+            >
+              <ClipboardIcon size={16} />
+              Launch Pad
+            </Link>
+          </CardHeader>
+        </Card>
       )}
       <h1 className="text-4xl">Dashboard</h1>
       <Separator className=" my-6" />

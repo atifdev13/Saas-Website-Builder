@@ -28,7 +28,7 @@ export default async function Home() {
 
         <p className="text-center">Run your agency, in one place</p>
         <div className="bg-gradient-to-r from-primary to-secondary-foreground text-transparent bg-clip-text relative">
-          <h1 className="text-9xl font-bold text-center md:text-[300px]">
+          <h1 className="text-9xl font-bold text-center md:text-[300px] opacity-[0.15] select-none pointer-events-none">
             Plura
           </h1>
         </div>
@@ -76,7 +76,7 @@ export default async function Home() {
               </CardHeader>
               <CardContent>
                 <span className="text-4xl font-bold">
-                  {card.unit_amount && card.unit_amount / 100}
+                  ${card.unit_amount && card.unit_amount / 100}
                 </span>
                 <span className="text-muted-foreground">
                   <span>/ {card.recurring?.interval}</span>
