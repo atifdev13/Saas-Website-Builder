@@ -43,7 +43,7 @@ export const pricingCards = [
     price: '$199',
     duration: 'month',
     highlight: 'Key features',
-    features: ['Rebilling', '24/7 Support team'],
+    features: ['Rebilling', '24/7 Support team', 'Unlimited Sub accounts', 'Unlimited Team members', 'Unlimited pipelines', 'Custom Domains', 'Priority Support'],
     priceId: 'price_1UbdBtL7AWh8WZf8GaAoYnMI',
   },
   {
